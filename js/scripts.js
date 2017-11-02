@@ -23,7 +23,7 @@ if (value > 0 ) {
     alert('Wynik jest równy zero');
 };
 */
-
+/*
  function getTriangleArea(a, h) {
  	var result = a*h/2;
   if (a <= 0 || h <= 0) {
@@ -34,4 +34,15 @@ if (value > 0 ) {
 }
 var triangle1Area = getTriangleArea(10, 15);
 console.log(getTriangleArea(10, 6));
+*/
 
+var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
+var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
+var allNames = femaleNames.concat(maleNames);
+
+console.log(allNames);
+var newName = 'Marian';
+
+if (allNames.indexOf(newName) === -1) {
+   var newName = allNames.push('Marian');
+}
