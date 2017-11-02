@@ -36,7 +36,9 @@ var triangle1Area = getTriangleArea(10, 15);
 console.log(getTriangleArea(10, 6));
 */
 
-var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
+//zadanie 9.2 
+
+/*var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
 var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
 var allNames = femaleNames.concat(maleNames);
 
@@ -46,3 +48,17 @@ var newName = 'Marian';
 if (allNames.indexOf(newName) === -1) {
    var newName = allNames.push('Marian');
 }
+
+*/
+// zadanie 9.3
+
+var text = 'Velociraptor is a genus of herbivorous ceratopsid dinosaur that first appeared during the late Maastrichtian stage of the late Cretaceous period.';
+var dinosaur = 'triceratops';
+var dinosaurUpperCased = dinosaur.toUpperCase();
+
+console.log(dinosaurUpperCased);
+
+var textCharsAfter = text.replace('Velociraptor', 'dinosaur');
+ var textCharsAfter = text.substr(13, 60);
+
+console.log(textCharsAfter);
