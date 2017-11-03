@@ -61,9 +61,24 @@ console.log(dinosaurUpperCased);
 var textCharsAfter = text.replace('Velociraptor', dinosaurUpperCased)
 console.log(textCharsAfter);
 
-var textLength = text.length
-var partOfText = text.slice(0, length/2);
+var textLength = text.length/2
+var partOfText = text.slice(0,text.length/2);
 console.log(partOfText);
+
+// zadanie 9.4
+function drawTree(heightTree){
+  
+for(var i=1;i<= heightTree;i++) {
+    var star = ' ';
+        for(var j= 1; j<=i; j++){
+        star += "*";
+        }
+        console.log(star);
+        }
+     
+}
+drawTree(5);
+
 
 
 
