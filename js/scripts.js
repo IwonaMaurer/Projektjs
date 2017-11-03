@@ -58,7 +58,14 @@ var dinosaurUpperCased = dinosaur.toUpperCase();
 
 console.log(dinosaurUpperCased);
 
-var textCharsAfter = text.replace('Velociraptor', 'dinosaur');
- var textCharsAfter = text.substr(13, 60);
-
+var textCharsAfter = text.replace('Velociraptor', 'triceratops');
 console.log(textCharsAfter);
+
+
+var partOfText = text.slice(0, 73);
+console.log(partOfText);
+
+
+
+
+
