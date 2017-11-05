@@ -88,5 +88,16 @@ for (var i = 0; i < withButtonClass.length; i++) {
              console.log(buttonText);
  }
 
+// zadanie 9.6
+var list = document.getElementById('list');
+var add = document.getElementById('addElem');
+add.addEventListener('click', function() {
+	var element = document.createElement('li');
+	element.innerHTML = 'item';
+    var listLi = document.getElementsByTagName("li").length;
+    list.appendChild(element);
+});
+
+
 
 
