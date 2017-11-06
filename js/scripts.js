@@ -23,18 +23,21 @@ if (value > 0 ) {
     alert('Wynik jest równy zero');
 };
 */
-/*
+
+// zadanie 9.1
+
  function getTriangleArea(a, h) {
- 	var result = a*h/2;
+ 	
   if (a <= 0 || h <= 0) {
-   console.log('Nieprawidłowe dane');
-} else if  (a > 0 || h > 0) {
+   return 'Nieprawidłowe dane';
+} else if  (a > 0 && h > 0) {
+  var result = a*h/2;
    return result;
 };
 }
-var triangle1Area = getTriangleArea(10, 15);
-console.log(getTriangleArea(10, 6));
-*/
+var triangle1Area = getTriangleArea(9, 15);
+console.log(triangle1Area);
+
 
 //zadanie 9.2 
 
@@ -81,22 +84,26 @@ for ( var i = 1; i <= heightTree; i++) {
 drawTree(5);
 */
          // zadanie 9.5
+         /*
 var withButtonClass = document.getElementsByClassName('button');
 
 for (var i = 0; i < withButtonClass.length; i++) {
 	 var buttonText = withButtonClass[i].innerText;
              console.log(buttonText);
  }
+ */
 
 // zadanie 9.6
 var list = document.getElementById('list');
 var add = document.getElementById('addElem');
 add.addEventListener('click', function() {
-	var element = document.createElement('li');
-	element.innerHTML = 'item';
-    var listLi = document.getElementsByTagName("li").length;
-    list.appendChild(element);
-});
+    var list1 = document.getElementsByTagName("li").length + 1;
+  var element = document.createElement('li');
+  element.innerHTML = 'item' + list1;
+    console.log(document.getElementsByTagName("li"));
+     list.appendChild(element);
+  
+   });
 
 
 
