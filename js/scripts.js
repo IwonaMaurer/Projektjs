@@ -26,7 +26,7 @@ if (value > 0 ) {
 
 // zadanie 9.1
 
- function getTriangleArea(a, h) {
+ /*function getTriangleArea(a, h) {
  	
   if (a <= 0 || h <= 0) {
    return 'Nieprawidłowe dane';
@@ -38,7 +38,7 @@ if (value > 0 ) {
 var triangle1Area = getTriangleArea(9, 15);
 console.log(triangle1Area);
 
-
+*/
 //zadanie 9.2 
 
 /*var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
@@ -92,7 +92,7 @@ for (var i = 0; i < withButtonClass.length; i++) {
              console.log(buttonText);
  }
  */
-
+/*
 // zadanie 9.6
 var list = document.getElementById('list');
 var add = document.getElementById('addElem');
@@ -104,7 +104,7 @@ add.addEventListener('click', function() {
      list.appendChild(element);
   
    });
-
+*/
 
 
 
