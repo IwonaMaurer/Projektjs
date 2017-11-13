@@ -1,0 +1,66 @@
+/*#carousel {
+     border: 2px solid;
+     height: 300 px;
+	 width: 100 %;
+	 overflow: auto;
+	
+    
+}
+img {
+	height: 300px;
+	width: 400px;
+	float: left;
+	
+}
+ul {
+	list-style-type: none;
+    position: relative;
+    margin: 0;
+    left: 0;
+}
+li {
+	
+	list-style-type: none;
+	float: left;
+  
+	
+}
+.btn {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+}
+#btn2 {
+    position: relative;
+    float: right;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+*/
+#carousel {
+    width: 2000px;
+    height: 400px;
+    overflow: auto;
+    border: solid;
+}
+
+#carousel .slides {
+    display: block;
+    width: 2000px
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#carousel img {
+    float: left;
+    list-style-type: none;
+    width: 400px;
+    height: 400px;
+}
+
