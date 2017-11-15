@@ -1,5 +1,6 @@
 
 //Start jQuery
+/*
 $(document).ready(function (){
 
 $(function(){
@@ -20,3 +21,22 @@ function moveFirstSlide() {
        carouselList.css({marginLeft:0});
     }
 };
+*/
+
+//zadanie 11.4
+
+function Phone(brand, price, color) {
+  this.brand = brand;
+  this.price = price;
+  this.color = color;
+}
+Phone.prototype.printInfo = function() {
+  console.log("The phone brand is " + this.brand + ", color is " + this.color + " and price is " + this.price + ".");
+}
+var iPhone6S = new Phone("Aplle", 2250, "sliver");
+var SamsungGalaxyS6 = new Phone("Samsung", 1420, "black");
+var OnePlusOne = new Phone("OnePlus", 1000, "black");
+
+
+iPhone6S.printInfo();
+
