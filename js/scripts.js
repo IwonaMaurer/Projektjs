@@ -25,6 +25,8 @@ function moveFirstSlide() {
 
 //zadanie 11.4
 
+/*
+
 function Phone(brand, price, color) {
   this.brand = brand;
   this.price = price;
@@ -40,3 +42,34 @@ var OnePlusOne = new Phone("OnePlus", 1000, "black");
 
 iPhone6S.printInfo();
 
+
+
+function Smartphone(brand, model) {
+  this.brand = brand;
+  this.model = model;
+}
+Smartphone.prototype.logModel = function() {
+  console.log(this.model);
+}
+
+iPhone6.logModel();
+*/
+
+// zadanie 11.5
+function Button(text) {
+     this.text = text || 'Hello';
+   }
+      Button.prototype = {
+      create: function() {
+        var self = this;
+        this.$element = $('<button>');
+        this.$element.text(this.text);
+        this.$element.click(function() {
+          alert(self.text);
+         this.$element.appendTo($('body'));
+       });
+
+      }
+    };
+        var btn1 = new Button('Hello');
+        btn1.create();
