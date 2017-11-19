@@ -120,7 +120,7 @@ $(function(){
       $column.append($columnTitle)
              .append($columnDelete)
              .append($columnAddCard)
-             .append($columnCardList)
+             .append($columnCardList);
       // return of created column
       return $column;
     }
@@ -134,10 +134,6 @@ $(function(){
       this.$element.remove();
      }
   };
-  //metoda addCard
-  this.$element.children('ul').append(card.$element);
-  // remove column
-  this.$element.remove();
 
   //funkcja konstruująca klasę card
 
