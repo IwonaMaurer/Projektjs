@@ -77,7 +77,7 @@ iPhone6.logModel();
 
 
 //zadanie 11.6
-$(function(){
+$(function() {
 
   function randomString() {
 
@@ -137,7 +137,7 @@ $(function(){
 
   //funkcja konstruująca klasę card
 
-  function card(description) {
+  function Card(description) {
         var self = this;
 
         this.id = randomString();
@@ -161,7 +161,7 @@ $(function(){
                    return $card;
            }
   }
-       card.prototype = {
+       Card.prototype = {
         removeCard: function() {
           this.$element.remove();
         }
@@ -186,7 +186,7 @@ $(function(){
        }
        //wrzucanie nowej kolumny do tablicy
        $('.create-column')
-          .click(function(){
+          .click(function() {
             var name = prompt('Enter a column name');
             var column = new Column(name);
                 board.addColumn(column);
