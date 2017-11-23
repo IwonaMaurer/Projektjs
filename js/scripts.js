@@ -212,6 +212,6 @@ $(function() {
 
 
 })
-
+//zadanie 12.4
 
 
