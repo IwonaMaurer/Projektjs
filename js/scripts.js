@@ -237,7 +237,7 @@ function getJoke() {
   xhr.send();
 }
 */
-
+/*
 //zadanie 12.5
 var prefix = "https://cors-anywhere.herokuapp.com/";
 var tweetLink = "https://twitter.com/intent/tweet?text=";
@@ -266,10 +266,36 @@ function createTweet(input) {
     $('.tweet').attr('href', tweet);
   }
  }
- 
+
 $(document).ready(function() {
   getQuote();
   $('.trigger').click(function() {
     getQuote();
   })
 });
+
+*/
+
+//zadanie 12.6
+var url = 'https://restcountries.eu/rest/v1/name/';
+var countriesList = $('#countries');
+
+$('#search').click(searchCountries);
+
+function searchCountries() {
+  var countryName = $('#country-name').val();
+  if(!countryName.length) countryName = 'Poland';
+  $.ajax( {
+         url: url + countryName,
+         method: 'GET' ,
+         success: showCountriesList
+  });
+}
+function showCountriesList(resp) {
+  countriesList.empty();
+  resp.forEach(function(item) {
+     $('<li>').text(item.name).appendTo(countriesList);    
+});
+}
+
+
