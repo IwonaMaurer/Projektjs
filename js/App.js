@@ -1,3 +1,9 @@
+var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
+var myHeaders = {
+  'X-Client-Id': '2564',
+  'X-Auth-Token': '6cb2b07d753d8d12d12340e6b3eaa456'
+};
+
 // OGÓLNA FUNKCJA
 function randomString() {
 	var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ'.split();
@@ -8,52 +14,30 @@ function randomString() {
 	return str;
 }
 
-// TWORZENIE NOWYCH EGZEMPLARZY KOLUMN
-var todoColumn = new Column('Do zrobienia');
-var doingColumn = new Column('W trakcie');
-var doneColumn = new Column('Skończone');
 
-// DODAWANIE KOLUMN DO TABLICY
-board.createColumn(todoColumn);
-board.createColumn(doingColumn);
-board.createColumn(doneColumn);
+$.ajaxSetup({
+	headers: myHeaders
+});
 
-// TWORZENIE NOWYCH EGZEMPLARZY KART
-var card1 = new Card('Nowe zadanie');
-var card2 = new Card('stworzyc tablice kanban');
+$.ajax({
+    url: baseUrl + '/board',
+    method: 'GET',
+    success: function(response) {
+      setupColumns(response.columns);
+    }
+});
 
-// DODAWANIE KART DO KOLUMN
-todoColumn.createCard(card1);
-doingColumn.createCard(card2);
-
-
-/*
-
-X-Client-Id: '2564'
-X-Auth-Token: '6cb2b07d753d8d12d12340e6b3eaa456'
-
-PUT /card/{id}
-------------------------------
-Request:
-{id}: int - id card we want to edit
-name: string - new name card
-bootcamp_kanban_column_id: int - the column id to which we want to move the post
-------------------------------
-Response:
-{
-   id: int
+function setupColumns(columns) {
+    columns.forEach(function (column) {
+  		var col = new Column(column.id, column.name);
+		board.createColumn(col);
+		setupCards(col, column.cards);
+    });
 }
 
-
-PUT /column/{id}
-------------------------------
-Request:
-{id}: int - the column id we want to edit
-name: string - new column name
-------------------------------
-Response:
-{
-   id: int
+function setupCards(col, cards) {
+	cards.forEach(function (card) {
+		var card = new Card(card.id, card.name, card.bootcamp_kanban_column_id);
+		col.create(card);
+	})
 }
-
-*/
