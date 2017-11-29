@@ -1,7 +1,9 @@
 function Column(id, name) {
-
+	   
+	var self = this;
+	
 	this.id = id;
-	this.name = name;
+	this.name = name || 'No name given';
 	this.element = createColumn();
 
 	function createColumn() {
@@ -48,7 +50,7 @@ Column.prototype = {
 	},
 	deleteColumn: function() {
 	  var self = this;
-	  $ajax({
+	  $.ajax({
 		  url: baseUrl + '/column/' + self.id,
 		  method: 'DELETE',
 		  success: function(response) {
