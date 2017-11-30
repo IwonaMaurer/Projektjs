@@ -1,0 +1,84 @@
+/* Kontener slide'ów */
+
+.slider {
+	margin: 0 auto;
+}
+
+/* Maska slide'ów */
+
+.maska {
+	position: relative;
+	overflow: hidden;
+}
+
+/* Wnętrze slide'ów */
+
+ul.slider1 {
+	list-style: none;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	padding: 0;
+	margin: 0;
+}
+ul.slider1 li {
+	float: left;
+	text-align: center;
+}
+ul.slider1 li img {
+	width: 100%;
+}
+
+/* Menu (kółka) */
+
+ul.menu {
+	text-align: center;
+	padding: 0;
+	position: relative;
+}
+ul.menu li {
+	border-radius: 10px;
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+	margin: 0 5px;
+	cursor: pointer;
+	background-color: silver;
+}
+ul.menu li.aktywny {
+	background-color: gray;
+	color: #000;
+}
+
+/* Strzałki < > */
+
+.control {
+	position: absolute;
+	background-color: silver;
+	padding: 10px;	
+	top: 40%;
+	z-index: 1;
+	cursor: pointer;
+	font-size: 30px;
+	font-weight: bold;
+	opacity: 0;
+	transition: all .4s;
+}
+.control:hover {
+	background-color: gray;
+}
+.maska:hover .control {
+	opacity: .8;
+}
+.poprzedni { 
+	left: 0;
+}
+.poprzedni:before {
+	content: '<';
+}
+.nastepny {
+	right: 0;
+}
+.nastepny:after {
+	content: '>';
+}
