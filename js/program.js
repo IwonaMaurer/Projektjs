@@ -1,6 +1,6 @@
 
 //zadanie 13.3
-var os = require('os');
+
 
 process.stdin.setEncoding('utf-8');
 process.stdin.on('readable', function() {
